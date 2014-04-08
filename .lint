@@ -1,0 +1,16 @@
+@root
+
+module
+
+indent 2
+maxlen 80
+
+ass
+nomen
+plusplus
+vars
+
+predef+ setTimeout
+
+./test.js
+predef+ global, __dirname
