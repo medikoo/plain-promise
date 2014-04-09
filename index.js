@@ -50,7 +50,7 @@ Promise.prototype = {
   _settle: function (value) {
     this._settled = true;
     this._value = value;
-    // Do not release callbacks before `resolve` or `reject` returns
+    // Do not release before `resolve` or `reject` returns
     setTimeout(this._callbacks.forEach.bind(this._callbacks, function (data) {
       this._release(data.onSuccess, data.onFail);
     }, this), 0);
@@ -60,7 +60,7 @@ Promise.prototype = {
   // Warning: Some implementations do not provide `done`
   done: function (onSuccess, onFail) {
     if (this._settled) {
-      // Do not release the "Zalgo"
+      // Do not release before `done` returns
       setTimeout(this._release.bind(this, onSuccess, onFail), 0);
     } else {
       this._callbacks.push({ onSuccess: onSuccess, onFail: onFail });
