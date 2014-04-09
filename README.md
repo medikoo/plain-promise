@@ -1,5 +1,5 @@
 # plain-promise
-## Simple promise implementation (for educational purposes)
+## Simple promise implementation
 
 Made for [Asynchronous JavaScript Interfaces](http://medikoo.com/asynchronous-javascript-interfaces/?notes) presentation. To walk through this implementation start with [Promises](http://medikoo.com/asynchronous-javascript-interfaces/promises/?notes) slide.
 
