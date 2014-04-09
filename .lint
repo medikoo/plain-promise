@@ -2,8 +2,8 @@
 
 module
 
-indent 2
-maxlen 80
+indent 4
+maxlen 90
 
 ass
 nomen
