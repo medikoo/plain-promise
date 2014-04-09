@@ -18,7 +18,7 @@ This implementation to stay away from additional complexity does not handle that
 
 ##### Support for foreign promises (thenables)
 
-Promise/A+ requires support for foreign (not coming from same implementation) promise objects, it's also specified behavior for ECMAScript 6 promises. Foreign promises assimilation is tricky and to make sure things won't brake (by really _unexpected_ type of implementation) involves numerous security steps.
+Promise/A+ requires support for foreign (not coming from same implementation) promise objects, it's also specified behavior for ECMAScript 6 promises. Foreign promises assimilation is tricky and to make sure things won't break (by really _unexpected_ type of implementation) involves numerous security steps.
 This logic is not important to understand how promises work, so to keep things simple, this library recognizes just own promises.
 
 ##### High level functions `all`, `race` etc.
@@ -44,7 +44,7 @@ var readFilePromised = function (path, encoding) {
   });
 };
 
-readFilePromise('/some/file.js', 'utf8').then(function (data) {
+readFilePromised('/some/file.js', 'utf8').then(function (data) {
   return data.split('\n');
 }).done(function (lines) {
  console.log("Lines of JS code", lines);
