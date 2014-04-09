@@ -1,20 +1,20 @@
 # plain-promise
 ## Simple promise implementation (for educational purposes)
 
-Made for [Asynchronous JavaScript Interfaces]() presentation. To walk through this implementation start with [Promises]() slide.
+Made for [Asynchronous JavaScript Interfaces](http://medikoo.com/asynchronous-javascript-interfaces/?notes) presentation. To walk through this implementation start with [Promises](http://medikoo.com/asynchronous-javascript-interfaces/promises/?notes) slide.
 
 Provides just basic API and for clarity it's free from any micro and macro optimizations.
 
-It's also proof of concept of how straightforward promise implementation can be with its design is centered around `done` method.
+It's also proof of concept of how straightforward promise implementation can be with its design centered around `done` method.
 
-Can safely be used in projects where code size is important, it's definitely one of the smallest published promise implementations.
+Can safely be used in projects where code size is important, it's definitely one of the smallest promise implementations.
 
 ### Things not covered in this implementation:
 
-##### Circular resolution rejection
+##### Rejection in case of circular resolution
 
 Circular resolution of promises is in most cases result of a bug. Promise/A+ demands to throw `TypeError` when such action occurs. It's not in effect (at least currently) in ECMAScript 6 version.
-This implementation does not handle that as well (to stay away from additional complexity). Resolving promise with itself leaves promise _resolved_ but in forever locked _unsettled_ state.
+This implementation to stay away from additional complexity does not handle that as well. Resolving promise with itself leaves promise _resolved_ but in forever locked _unsettled_ state.
 
 ##### Support for foreign promises (thenables)
 
@@ -23,7 +23,7 @@ This logic is not important to understand how promises work, so to keep things s
 
 ##### High level functions `all`, `race` etc.
 
-This implementation focuses just on base promise logic, and any high level functions that operate on promises are out of its scope.
+This implementation focuses just on core promise algorithm and any high level functions that operate on multiple promise objects are out of its scope.
 
 ### Example Usage
 
@@ -43,6 +43,12 @@ var readFilePromised = function (path, encoding) {
     });
   });
 };
+
+readFilePromise('/some/file.js', 'utf8').then(function (data) {
+  return data.split('\n');
+}).done(function (lines) {
+ console.log("Lines of JS code", lines);
+});;
 ```
 
 #### Deferred
