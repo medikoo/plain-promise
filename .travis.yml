@@ -6,4 +6,4 @@ node_js:
 
 notifications:
   email:
-    - medikoo+es5-fix@medikoo.com
+    - medikoo+plain-promise@medikoo.com
