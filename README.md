@@ -81,9 +81,8 @@ var readFilePromised = function (path, encoding) {
 
 You can easily bundle _plain-promise_ for browser with any CJS bundler (no favorite? Try: [Browserify](http://browserify.org/), [Webmake](https://github.com/medikoo/modules-webmake) or [Webpack](http://webpack.github.io/))
 
-### Tests
+### Tests [![Build Status](https://travis-ci.org/medikoo/plain-promise.png)](https://travis-ci.org/medikoo/plain-promise)
 
 It passes all Promise/A+ tests, apart of 2.3.1 (Circular resolution case) and 2.3.3 (Support for foreign promises).
 
 	$ npm test
-
