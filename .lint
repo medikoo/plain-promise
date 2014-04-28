@@ -3,7 +3,7 @@
 module
 
 indent 4
-maxlen 90
+maxlen 100
 
 ass
 nomen
