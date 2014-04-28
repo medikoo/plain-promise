@@ -13,13 +13,13 @@
     "type": "git",
     "url": "git://github.com/medikoo/plain-promise.git"
   },
-  "scripts": {
-    "test": "node ./bin/test"
-  },
   "devDependencies": {
-    "es5-ext": "~0.9.2",
+    "es5-ext": "~0.10.2",
     "mocha": "~1.18.2",
     "promises-aplus-tests": "~2.0.4"
+  },
+  "scripts": {
+    "test": "node ./bin/test"
   },
   "license": "MIT"
 }
