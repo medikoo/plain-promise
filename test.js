@@ -1,7 +1,7 @@
 'use strict';
 
-var callable = require('es5-ext/lib/Object/valid-callable')
-  , assign   = require('es5-ext/lib/Object/extend')
+var assign   = require('es5-ext/object/assign')
+  , callable = require('es5-ext/object/valid-callable')
   , path     = require('path')
   , readdir  = require('fs').readdir
   , Mocha    = require("mocha")
