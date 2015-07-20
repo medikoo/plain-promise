@@ -96,5 +96,5 @@ Promise.prototype = {
     },
     catch: function (onFail) {
         return this.then(null, onFail);
-  }
+    }
 };
