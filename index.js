@@ -16,6 +16,7 @@ Promise.cast = function (value) {
 };
 
 Promise.prototype = {
+    constructor: Promise,
 
     // Private properties and methods:
     _failed: false,
