@@ -3,3 +3,4 @@
 /npm-debug.log
 /.lintcache
 /.dir-locals.el
+/package-lock.json
